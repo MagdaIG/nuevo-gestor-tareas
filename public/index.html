@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-clipboard-list"></i> Gestor de Tareas</h1>
+            <p>Organiza tus tareas de manera eficiente</p>
+        </header>
+
+        <div class="task-form-container">
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <input type="text" id="taskTitle" placeholder="Escribe una nueva tarea..." required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Agregar Tarea
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-list-ul"></i> Todas
+            </button>
+            <button class="filter-btn" data-filter="pending">
+                <i class="fas fa-hourglass-half"></i> Pendientes
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                <i class="fas fa-check-circle"></i> Completadas
+            </button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="pendingTasks">0</span>
+                <span class="stat-label">Pendientes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">Completadas</span>
+            </div>
+        </div>
+
+        <div class="tasks-container">
+            <div id="loadingMessage" class="loading-message">
+                <i class="fas fa-spinner fa-spin"></i> Cargando tareas...
+            </div>
+            <div id="emptyMessage" class="empty-message" style="display: none;">
+                <i class="fas fa-clipboard"></i>
+                <h3>No hay tareas</h3>
+                <p>Agrega tu primera tarea para comenzar</p>
+            </div>
+            <ul id="tasksList" class="tasks-list"></ul>
+        </div>
+    </div>
+
+    <!-- Modal para editar tareas -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Editar Tarea</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="editForm">
+                <div class="form-group">
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="editCompleted">
+                        <span class="checkmark"></span>
+                        Tarea completada
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelEdit">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> Confirmar Acción</h3>
+                <button class="close-btn" id="closeConfirmModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="confirmMessage">¿Estás seguro de que quieres realizar esta acción?</p>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="cancelConfirm">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirmAction">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast para notificaciones -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Desarrollado por</h4>
+                <p>Magdalena Inalaf González</p>
+                <p>Full Stack Developer & UX Designer</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <div class="footer-links">
+                    <a href="https://github.com/MagdaIG" target="_blank" rel="noopener" class="footer-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/minalaf/" target="_blank" rel="noopener" class="footer-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://inalaf.ca/" target="_blank" rel="noopener" class="footer-link">
+                        <i class="fas fa-globe"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>magda.inalaf@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Magdalena Inalaf González. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
