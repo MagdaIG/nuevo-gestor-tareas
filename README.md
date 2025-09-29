@@ -94,6 +94,8 @@ nuevo-gestor-tareas/
 ├── fileUtils.js       # Funciones para manejo de archivos JSON
 ├── tasks.json         # Archivo de persistencia de tareas
 ├── package.json       # Configuración del proyecto
+├── package-lock.json  # Lock file de dependencias
+├── .gitignore         # Archivos ignorados por Git
 ├── README.md          # Este archivo
 └── public/            # Archivos estáticos de la interfaz web
     ├── index.html     # Página principal
@@ -159,15 +161,21 @@ curl -X DELETE http://localhost:3000/tasks/1703123456789
 ## Características de la Interfaz Web
 
 - **Diseño Moderno**: Interfaz elegante con gradientes y sombras
-- **Paleta de Colores**: Tonos crema, naranja suave, rosa y morado
-- **Responsive**: Se adapta a dispositivos móviles y tablets
+- **Paleta de Colores Profesional**: 
+  - Crema (#FFF8DC) para fondos suaves
+  - Naranja suave (#FFB6C1) para botones de éxito
+  - Rosa oscuro/Magenta (#8B4A6B) para elementos principales
+  - Morado intenso (#5D2A42) para gradientes de fondo
+- **Responsive**: Se adapta perfectamente a dispositivos móviles y tablets
 - **Filtros Inteligentes**: Ver todas las tareas, solo pendientes o completadas
 - **Estadísticas**: Contador en tiempo real de tareas totales, pendientes y completadas
 - **Notificaciones**: Mensajes toast para confirmar acciones
 - **Modal de Edición**: Interfaz intuitiva para modificar tareas
-- **Modal de Confirmación**: Reemplaza las alertas del navegador
+- **Modal de Confirmación**: Reemplaza las alertas del navegador con diseño profesional
 - **Animaciones**: Transiciones suaves y efectos hover
 - **Footer Profesional**: Enlaces a GitHub, LinkedIn y portfolio
+- **Iconos Profesionales**: Font Awesome en lugar de emojis
+- **Diseño Responsive Avanzado**: Breakpoints para móviles, tablets y desktop
 
 ## Notas
 
@@ -176,3 +184,17 @@ curl -X DELETE http://localhost:3000/tasks/1703123456789
 - La aplicación incluye validación de datos y manejo de errores
 - Todas las respuestas siguen un formato JSON consistente
 - La interfaz web se actualiza automáticamente al realizar cambios
+- El archivo `.gitignore` está configurado para excluir `node_modules` y archivos temporales
+
+## Desarrollador
+
+**Magdalena Inalaf González**
+- Full Stack Developer & UX Designer
+- GitHub: [@MagdaIG](https://github.com/MagdaIG)
+- LinkedIn: [linkedin.com/in/minalaf](https://www.linkedin.com/in/minalaf/)
+- Portfolio: [inalaf.ca](https://inalaf.ca/)
+- Email: magda.inalaf@gmail.com
+
+## Licencia
+
+Este proyecto está bajo la Licencia ISC.

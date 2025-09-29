@@ -1,0 +1,17 @@
+{
+  "name": "nuevo-gestor-tareas",
+  "version": "1.0.0",
+  "description": "Aplicación de gestión de tareas con Node.js y Express, usando archivos JSON para persistencia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["tareas", "nodejs", "express", "json", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

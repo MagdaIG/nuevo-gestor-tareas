@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1759125631465",
+    "title": "Diseñar la interfaz de usuario",
+    "completed": false,
+    "createdAt": "2025-09-29T06:00:31.465Z"
+  },
+  {
+    "id": "1759125635934",
+    "title": "Implementar funcionalidades de la API",
+    "completed": true,
+    "createdAt": "2025-09-29T06:00:35.934Z",
+    "updatedAt": "2025-09-29T06:02:08.591Z"
+  },
+  {
+    "id": "1759125639501",
+    "title": "Probar la aplicación completa",
+    "completed": false,
+    "createdAt": "2025-09-29T06:00:39.501Z"
+  },
+  {
+    "id": "1759125963121",
+    "title": "Probar modal de confirmación",
+    "completed": false,
+    "createdAt": "2025-09-29T06:06:03.121Z"
+  }
+]
